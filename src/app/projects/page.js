@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import PageTransition, { PageTransitionHome } from '../component/Transitions'
+import PageTransition, { PageTransitionHome } from '../components/utils/Transitions'
 
 const Projects = () => {
   const [test, setTest] = useState(false)

@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { useScroll, useTransform, motion, easeOut, easeInOut } from "framer-motion";
-import { Circle, Plus, PlusFilled, Right, Shluff } from "./assets/SpanElements";
-import ScrollDeltaIndicator from './util/HomeIndicator';
+import { Barcode, Circle, Left, Line, Plus, PlusFilled, Right, Shluff, TripleTriangle } from "../assets/HomeElements";
+import ScrollIndicator from './HomeIndicator';
 
-const HomeTitle = ({onTrue={}}) => { // buat agar onTrue dapat dieksekusi di component ini
+const HomeTitle = ({onTrue={}}) => {
   // const { scrollY } = useScroll();
   // const fixedScrollPoint = 1000;
   // const translateY = useTransform(scrollY, [0, fixedScrollPoint], [0, fixedScrollPoint]);
@@ -34,7 +34,6 @@ const HomeTitle = ({onTrue={}}) => { // buat agar onTrue dapat dieksekusi di com
 
         setScrollDelta((prevDelta) => Math.max(prevDelta + delta, 0));
 
-        // Reset decayTimer every time scrolling occurs
         decayScroll();
       }
     };
@@ -79,24 +78,25 @@ const HomeTitle = ({onTrue={}}) => { // buat agar onTrue dapat dieksekusi di com
     }
     
   return (
-    <motion.section 
-    // whileHover={{skew:1.2}} 
-    onWheel={() => setTrue()} 
-    // style={{translateY}} 
-    // exit={{ opacity: 0 }} 
-    // transition={{ease: easeInOut}} 
-    className={`bg-dark passive flex h-screen p-4 sm:p-24 items-center justify-center`}>
+    <>
+      <motion.section 
+      // whileHover={{skew:1.2}} 
+      onWheel={() => setTrue()} 
+      className={`bg-dark passive flex h-screen w-screen p-4 sm:p-24 items-center justify-center overflow-hidden`}>
         <Circle scrollDelta={scrollDelta} />
         <Shluff scrollDelta={scrollDelta} />
-        <ScrollDeltaIndicator scrollDelta={scrollDelta} />
-        <div className='fixed'>
-        <PlusFilled className="fixed scale-50 left-[50%+12px] top-[60%-12px]"/>
-        <Plus className='scale-50' />
-        <div style={{scale:0.5}} className='fixed w-10 h-auto left-0 -top-[50%]'>
-        {/* <Right /> */}
-        </div>
-        </div>
+
+          {/* <PlusFilled className="absolute scale-50 top-0 right-0"/>
+          <Plus className='absolute scale-[0.4] top-0 right-0' />
+          <Plus className='absolute scale-50 top-[50%] left-0' /> */}
+        <ScrollIndicator scrollDelta={scrollDelta} />
+        <Right className='fixed right-0 bottom-0' />
+        <Left className='fixed left-0 top-0' />
+        <Barcode className='fixed left-5 bottom-5' />
+        <Line className='fixed right-10 top-5 scale-75' />
+        <TripleTriangle className='fixed left-[50%-51/2] animate-slideDown top-5 z-[55]' onClick={() => onTrue()} />
       </motion.section>
+    </>
   )
 }
 

@@ -1,11 +1,11 @@
 'use client'
 
 import { useWindowBlurChangeTitle } from "use-window-blur-change-title";
-import HomeContent from "./component/HomeContent";
 import { useEffect, useState } from "react";
-import HomeTitle from "./component/HomeTitle";
 import Lenis from "@studio-freight/lenis";
-import { PageTransitionHome } from "./component/Transitions";
+import { PageTransitionHome } from "./components/utils/Transitions";
+import HomeContent from "./components/home/HomeContent";
+import HomeTitle from "./components/home/HomeTitle";
 
 
 export default function Home() {

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Script = () => {
+  useEffect( () => {
     function handleScroll() {
         var sidebar = document.getElementById('side-bar');
         var slideData = document.getElementById('slides-data-main');
@@ -19,11 +20,9 @@ const Script = () => {
             slideData.style.display='unset';
     }
     }
-  return (
-    // Panggil fungsi handleScroll saat halaman dimuat dan saat di-scroll
     window.addEventListener('load', handleScroll);
     window.addEventListener('scroll', handleScroll);
-  )
+  })
 }
 
 export default Script

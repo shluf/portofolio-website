@@ -19,6 +19,16 @@ module.exports = {
       },
       gridAutoRows: {
         'default': 'minmax(100px, auto)'
+      },
+      animation: {
+        slideDown: 'slideDown 2s ease-in-out infinite',
+        spinSlow: 'spin 3s linear infinite',
+      },
+      keyframes: {
+        slideDown: {
+          '0%, 100%': { transform: 'translateY(5px)' },
+          '50%': { transform: 'translateY(0px)' },
+        },
       }
     },
   },

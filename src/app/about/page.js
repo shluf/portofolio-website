@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import HomeTitleNew from '../component/HomeTitle'
+import HomeTitleNew from '../components/HomeTitle'
 
 const About = () => {
 

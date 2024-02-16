@@ -4,22 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import ToggleDarkLight from "./ToggleDarkLight";
-
-
-const gridMenu = {
-        hide : {y:-350, opacity:0},
-        show : {y:0, opacity:1},
-        transition : {duration:10, ease:'easeInOut'}
-    }
-
-const gridMenuContent = {
-        hideLeft : {x: 0, opacity:0},
-        showLeft : {x: 9, opacity:1},
-        hideRight : {x:-4, y: -4},
-        showRight : {x:0, y:0},
-        transition : {duration:2, ease:'easeInOut'}
-    }
+import { gridMenu, gridMenuContent } from "./utils/MenuAnimations";
+import ToggleDarkLight from "./notnow/ToggleDarkLight";
 
 
 const CustomLink = ({href, title, num, className="", onClick}) => {
@@ -90,7 +76,7 @@ const MainLink = () => {
 
     return (
             <nav className="w-full sm:flex sm:flex-col sm:items-end sm:justify-end sm:bottom-[unset] sm:py-3 py-0 fixed bottom-0 z-[50]">
-                <div onClick={() => menuCheck === false ? setMenuCheck(true) : setMenuCheck(false)} className={`${menuCheck ? 'fixed' : 'hidden' } left-0 top-0 h-screen w-screen bg-[#00000065] -z-[20]`} />
+                <div onClick={() => menuCheck === false ? setMenuCheck(true) : setMenuCheck(false)} className={`${menuCheck ? 'fixed' : 'hidden' } left-0 top-0 h-screen w-screen bg-[#000000a9] -z-[20]`} />
                 <div className="hidden sm:flex items-center rounded-xl sm:mx-5 text-dark ">
                     <motion.button 
                     whileHover={{x: -10}}

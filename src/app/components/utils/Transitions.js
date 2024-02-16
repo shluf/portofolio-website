@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const PageTransition = () => {
   const [hideAnimation, setHideAnimation] = useState(false)
-  const name = ['Halo', 'Hai', 'Selamat Datang']
+  // const name = ['Halo', 'Hai', 'Selamat Datang']
 
   return (
     <>
