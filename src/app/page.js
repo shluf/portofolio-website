@@ -3,7 +3,7 @@
 import { useWindowBlurChangeTitle } from "use-window-blur-change-title";
 import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
-import { PageTransitionHome } from "./components/utils/Transitions";
+import { PageTransitionHome } from "./components/animations/Transitions";
 import HomeContent from "./components/home/HomeContent";
 import HomeTitle from "./components/home/HomeTitle";
 

@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
-import PageTransition from './components/utils/Transitions'
+import PageTransition from './components/animations/Transitions'
 
 const SetupTransitions = ({children}) => {
     const router = usePathname()

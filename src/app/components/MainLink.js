@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { gridMenu, gridMenuContent } from "./utils/MenuAnimations";
+import { gridMenu, gridMenuContent } from "./animations/MenuAnimations";
 import ToggleDarkLight from "./notnow/ToggleDarkLight";
 
 

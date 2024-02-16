@@ -92,9 +92,9 @@ const HomeTitle = ({onTrue={}}) => {
         <ScrollIndicator scrollDelta={scrollDelta} />
         <Right className='fixed right-0 bottom-0' />
         <Left className='fixed left-0 top-0' />
-        <Barcode className='fixed left-5 bottom-5' />
-        <Line className='fixed right-10 top-5 scale-75' />
-        <TripleTriangle className='fixed left-[50%-51/2] animate-slideDown top-5 z-[55]' onClick={() => onTrue()} />
+        {/* <Barcode className='fixed left-5 bottom-5' /> */}
+        {/* <Line className='fixed right-10 top-5 scale-75' /> */}
+        <TripleTriangle className='fixed left-[50%-51/2] top-5 z-[55]' onClick={() => onTrue()} />
       </motion.section>
     </>
   )

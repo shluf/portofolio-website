@@ -24,8 +24,8 @@ const ScrollIndicator = ({ scrollDelta }) => {
   };
 
   return (
-    <motion.div style={containerStyle}>
-      <motion.div style={barStyle}></motion.div>
+    <motion.div initial={{y:10,opacity:0}} whileInView={{y:0,opacity:1, transition: {delay:0.5, duration:1, ease:'easeInOut'}}} style={containerStyle}>
+      <motion.div  style={barStyle}></motion.div>
     </motion.div>
   );
 };
