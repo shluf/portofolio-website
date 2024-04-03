@@ -27,7 +27,7 @@ export default function Home() {
   setHomeContentHidden(false)
   setTimeout(() => {
     setPageTransitionComplete(true);
-  }, 500)
+  }, 0)
 }
 
   return (
