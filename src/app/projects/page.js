@@ -1,20 +1,13 @@
-'use client'
-import React, { useState } from 'react'
-import PageTransition, { PageTransitionHome } from '../components/animations/Transitions'
+"use client";
+import React, { useState } from "react";
+import PageTransition, {
+  PageTransitionHome,
+} from "../components/animations/Transitions";
+import UnderConstruction from "../components/notnow/UnderConstruction";
 
 const Projects = () => {
-  const [test, setTest] = useState(false)
-  return (
-    <main className="box-border flex min-h-screen flex-col">
-      <section className="h-screen p-24 flex items-center justify-center">
-        <div>
-          Page
-          <button onClick={() => {test ? setTest(false) : setTest(true)}}>Test</button>
-          {test? <PageTransitionHome /> : null}
-        </div>
-      </section>
-    </main>
-  )
-}
+  const [test, setTest] = useState(false);
+  return <UnderConstruction />;
+};
 
-export default Projects
+export default Projects;
