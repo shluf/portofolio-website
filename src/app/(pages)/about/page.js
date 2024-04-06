@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import UnderConstruction from "../components/notnow/UnderConstruction";
+import UnderConstruction from "../../components/notnow/UnderConstruction";
 
 const About = () => {
   const [homeContentHidden, setHomeContentHidden] = useState(true);
